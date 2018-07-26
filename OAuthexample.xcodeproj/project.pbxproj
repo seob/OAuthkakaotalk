@@ -13,6 +13,8 @@
 		2A40A1DC210961FF0022B635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A40A1DB210961FF0022B635 /* Assets.xcassets */; };
 		2A40A1DF210961FF0022B635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A40A1DD210961FF0022B635 /* LaunchScreen.storyboard */; };
 		2A40A1E8210964140022B635 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A40A1E7210964140022B635 /* KakaoOpenSDK.framework */; };
+		2A40A1F121099B360022B635 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40A1F021099B360022B635 /* MainViewController.swift */; };
+		2A40A1F321099B460022B635 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A40A1F221099B460022B635 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		2A40A1E0210962000022B635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A40A1E7210964140022B635 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = OAuthexample/Framework/KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		2A40A1E9210968C30022B635 /* OAuthexample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuthexample-Bridging-Header.h"; sourceTree = "<group>"; };
+		2A40A1F021099B360022B635 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2A40A1F221099B460022B635 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				2A40A1D4210961FE0022B635 /* AppDelegate.swift */,
 				2A40A1D6210961FE0022B635 /* ViewController.swift */,
 				2A40A1D8210961FE0022B635 /* Main.storyboard */,
+				2A40A1F021099B360022B635 /* MainViewController.swift */,
+				2A40A1F221099B460022B635 /* LoginViewController.swift */,
 				2A40A1DB210961FF0022B635 /* Assets.xcassets */,
 				2A40A1DD210961FF0022B635 /* LaunchScreen.storyboard */,
 				2A40A1E0210962000022B635 /* Info.plist */,
@@ -150,6 +156,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A40A1F321099B460022B635 /* LoginViewController.swift in Sources */,
+				2A40A1F121099B360022B635 /* MainViewController.swift in Sources */,
 				2A40A1D7210961FE0022B635 /* ViewController.swift in Sources */,
 				2A40A1D5210961FE0022B635 /* AppDelegate.swift in Sources */,
 			);
