@@ -12,6 +12,7 @@
 		2A40A1DA210961FE0022B635 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A40A1D8210961FE0022B635 /* Main.storyboard */; };
 		2A40A1DC210961FF0022B635 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A40A1DB210961FF0022B635 /* Assets.xcassets */; };
 		2A40A1DF210961FF0022B635 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A40A1DD210961FF0022B635 /* LaunchScreen.storyboard */; };
+		2A40A1E8210964140022B635 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A40A1E7210964140022B635 /* KakaoOpenSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		2A40A1DB210961FF0022B635 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A40A1DE210961FF0022B635 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A40A1E0210962000022B635 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A40A1E7210964140022B635 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KakaoOpenSDK.framework; path = OAuthexample/Framework/KakaoOpenSDK.framework; sourceTree = "<group>"; };
+		2A40A1E9210968C30022B635 /* OAuthexample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OAuthexample-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A40A1E8210964140022B635 /* KakaoOpenSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				2A40A1D3210961FE0022B635 /* OAuthexample */,
 				2A40A1D2210961FE0022B635 /* Products */,
+				2A40A1E6210964140022B635 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,8 +65,17 @@
 				2A40A1DB210961FF0022B635 /* Assets.xcassets */,
 				2A40A1DD210961FF0022B635 /* LaunchScreen.storyboard */,
 				2A40A1E0210962000022B635 /* Info.plist */,
+				2A40A1E9210968C30022B635 /* OAuthexample-Bridging-Header.h */,
 			);
 			path = OAuthexample;
+			sourceTree = "<group>";
+		};
+		2A40A1E6210964140022B635 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2A40A1E7210964140022B635 /* KakaoOpenSDK.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +110,7 @@
 				TargetAttributes = {
 					2A40A1D0210961FE0022B635 = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 				};
 			};
@@ -280,15 +295,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7DJXJAG9T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OAuthexample/Framework",
+				);
 				INFOPLIST_FILE = OAuthexample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.seob.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAuthexample/OAuthexample-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -298,15 +321,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = U7DJXJAG9T;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/OAuthexample/Framework",
+				);
 				INFOPLIST_FILE = OAuthexample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = kr.seob.example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "OAuthexample/OAuthexample-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
